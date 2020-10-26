@@ -1,5 +1,11 @@
 package id.algorythm.sort;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Date;
+
 public class BubbleSort {
 
     static void bubbleSort(int[] arr) {
@@ -18,21 +24,17 @@ public class BubbleSort {
         }
 
     }
-    public static void main(String[] args) {
-        int arr[] ={3,60,35,2,45,320,5};
-
-        System.out.println("Array Before Bubble Sort");
-        for(int i=0; i < arr.length; i++){
-            System.out.print(arr[i] + " ");
-        }
-        System.out.println();
-
-        bubbleSort(arr);//sorting array elements using bubble sort
-
-        System.out.println("Array After Bubble Sort");
-        for(int i=0; i < arr.length; i++){
-            System.out.print(arr[i] + " ");
-        }
+    public static void main(String[] args) throws ParseException {
+        ArrayList<Date> date=new ArrayList<>();
+        SimpleDateFormat format=new SimpleDateFormat("dd-MM-yyyy");
+        Date date1=format.parse("02-12-2001");
+        Date date2=format.parse("12-09-1999");
+        Date date3=format.parse("13-11-2016");
+        date.add(date1);
+        date.add(date2);
+        date.add(date3);
+        Collections.sort(date);
+        date.forEach(action-> System.out.println(format.format(action)));
 
     }
 
