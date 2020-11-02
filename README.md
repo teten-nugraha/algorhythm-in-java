@@ -12,7 +12,7 @@
 This project is a collection of algorithms using the Java language implementation , like:
 
 * Sort
-* Search [TODO]
+* Search 
 * Graph Search [TODO]
 * Math [TODO]
 * Data Compression [TODO]
